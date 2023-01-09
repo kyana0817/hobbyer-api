@@ -1,0 +1,12 @@
+#!/usr/bin/expect
+
+spawn dpkg -i mysql-apt-config_0.8.24-1_all.deb
+
+expect {
+  -regexp "Which MySQL product do you wish to configure?" {
+    send "4\n"
+    exp_continue
+  }
+}
+
+exit 0
