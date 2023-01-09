@@ -10,6 +10,7 @@ def get_auth(token):
   cleand = clean_token(token)
   decoded = auth.verify_id_token(cleand)
   user = auth.get_user(decoded['uid'])
+  print(user)
   return user
 
 def set_custom_field(user, appid):

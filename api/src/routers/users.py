@@ -1,13 +1,13 @@
 from fastapi import APIRouter, Header, Depends, Request
-from sqlalchemy.orm import Session
 
-from app.infrastractures.database import get_db
 from app.infrastractures.authenticate import set_custom_field, get_auth
 from app.handlers.authHandlers import user_create
+from app.dependencies import get_db, get_current_user
 from app.models.user import UserCreate
 
 router = APIRouter(
-  prefix="/user"
+  prefix="/user",
+  dependencies=[Depends(get_db), Depends(get_current_user)]
 )
 
 
