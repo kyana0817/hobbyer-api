@@ -19,6 +19,7 @@ services:
 
   api:
     build: './api'
+    platform: linux/x86_64 
     working_dir: /service
     ports:  
       - "80:80"
