@@ -1,7 +1,7 @@
 from fastapi import Request, Header
 
-from app.infrastractures.authenticate import get_auth, current_user
-from app.infrastractures.database import SessionLocal
+from app.infrastructures.authenticate import get_auth, current_user
+from app.infrastructures.database import SessionLocal
 
 def get_db(request: Request):
   request.state.db = SessionLocal()

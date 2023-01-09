@@ -13,8 +13,8 @@ def get_auth(token):
   print(user)
   return user
 
-def set_custom_field(user, appid):
-  auth.set_custom_user_claims(user.uid, {'appid': appid})
+def set_custom_field(user, app_id):
+  auth.set_custom_user_claims(user.uid, {'appid': app_id})
 
 def clean_token(token):
   return token.replace('Bearer ', '')

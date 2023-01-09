@@ -5,4 +5,3 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
   email: str
-

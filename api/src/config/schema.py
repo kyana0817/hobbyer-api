@@ -3,7 +3,7 @@ from sqlalchemy import ( Column, Integer,
 String, Text, Boolean, DateTime, ForeignKey)
 from sqlalchemy.orm import relationship
 
-from app.infrastractures.database import Base
+from app.infrastructures.database import Base
 
 class UserHobby(Base):
   __tablename__ = 'user_hobbies'
